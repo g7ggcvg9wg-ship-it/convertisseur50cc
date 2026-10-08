@@ -1,0 +1,728 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 72px;
+    background: rgba(9, 9, 9, 0.96);
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: #dfff00;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+nav a {
+    color: #999;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.nav-button {
+    background: #dfff00;
+    color: #090909;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            #303500 0,
+            #151700 18%,
+            transparent 42%
+        ),
+        #090909;
+}
+
+.hero-background {
+    position: absolute;
+    right: -100px;
+    top: 50px;
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid #292d00;
+    border-radius: 50%;
+
+    opacity: .5;
+}
+
+.hero-background::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: 90px;
+    top: 90px;
+
+    border: 1px solid #343800;
+
+    border-radius: 50%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+
+    color: #dfff00;
+
+    border: 1px solid #404700;
+
+    background: #141600;
+
+    padding: 8px 12px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 94px);
+
+    line-height: .92;
+
+    letter-spacing: -5px;
+
+    margin: 25px 0;
+
+    max-width: 800px;
+}
+
+.hero h1 span {
+    color: #dfff00;
+}
+
+.hero p {
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 590px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition: .2s;
+}
+
+.button-main {
+    background: #dfff00;
+
+    color: #090909;
+}
+
+.button-main:hover {
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    border: 1px solid #333;
+
+    color: #aaa;
+}
+
+.button-secondary:hover {
+    border-color: #666;
+
+    color: white;
+}
+
+
+/* =========================
+   TOOLS
+========================= */
+
+.tools-section {
+    background: #111;
+
+    padding: 100px 0;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #b5c900;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.section-header h2,
+.calculator-heading h2,
+.about-box h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+
+    margin: 10px 0 0;
+}
+
+.section-header > p {
+    max-width: 400px;
+
+    color: #777;
+
+    line-height: 1.6;
+}
+
+.tools-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+.tool-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    min-height: 150px;
+
+    background: #161616;
+
+    border: 1px solid #242424;
+
+    border-radius: 12px;
+
+    transition: .25s;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #555;
+
+    background: #191919;
+}
+
+.tool-icon {
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #202300;
+
+    border: 1px solid #3b4100;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+.tool-card h3 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+}
+
+.tool-card p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    max-width: 400px;
+}
+
+.arrow {
+    margin-left: auto;
+
+    color: #dfff00;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   CALCULATEURS
+========================= */
+
+.calculator-section {
+    padding: 110px 0;
+
+    background: #090909;
+}
+
+.calculator-section.light {
+    background: #111;
+}
+
+.calculator-heading {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+    margin-bottom: 35px;
+}
+
+.number {
+    color: #dfff00;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    padding-top: 8px;
+}
+
+.calculator-heading p {
+    color: #777;
+
+    margin: 10px 0 0;
+
+    font-size: 15px;
+}
+
+.calculator-card {
+    background: #111;
+
+    border: 1px solid #252525;
+
+    border-radius: 15px;
+
+    padding: 32px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.light .calculator-card {
+    background: #151515;
+}
+
+.input-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.input-grid.two {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 700px;
+}
+
+label {
+    display: block;
+
+    color: #bbb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+label span {
+    color: #666;
+
+    margin-left: 4px;
+
+    font-weight: 400;
+}
+
+input {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 9px;
+
+    padding: 15px;
+
+    background: #0b0b0b;
+
+    border: 1px solid #303030;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: .2s;
+}
+
+input:focus {
+    border-color: #dfff00;
+
+    box-shadow: 0 0 0 2px rgba(223,255,0,.08);
+}
+
+
+/* =========================
+   RESULTAT
+========================= */
+
+.result-box {
+    margin-top: 25px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1a1d00,
+            #111
+        );
+
+    border: 1px solid #333800;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.result-box span {
+    display: block;
+
+    color: #888;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.result-box strong {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: #dfff00;
+
+    font-size: 58px;
+
+    letter-spacing: -3px;
+}
+
+.result-box small {
+    color: #777;
+
+    font-size: 18px;
+
+    margin-left: 5px;
+}
+
+.result-side {
+    text-align: right;
+}
+
+.result-side b {
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 25px;
+}
+
+.disclaimer {
+    margin: 15px 0 0;
+
+    color: #666;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about-section {
+    padding: 100px 0;
+
+    background: #dfff00;
+
+    color: #090909;
+}
+
+.about-box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-box .section-label {
+    color: #555900;
+}
+
+.about-box h2 {
+    font-size: 48px;
+}
+
+.about-box p {
+    color: #303300;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #070707;
+
+    padding: 40px 0;
+
+    color: #777;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-content p {
+    margin-right: auto;
+
+    font-size: 13px;
+}
+
+.footer-content small {
+    color: #555;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .nav-button {
+        margin-left: auto;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .section-header {
+        display: block;
+    }
+
+    .section-header > p {
+        margin-top: 20px;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-grid,
+    .input-grid.two {
+        grid-template-columns: 1fr;
+
+        max-width: none;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .about-box h2 {
+        font-size: 38px;
+    }
+
+    .footer-content {
+        display: block;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        justify-content: center;
+    }
+
+    .calculator-card {
+        padding: 20px;
+    }
+
+    .result-box {
+        display: block;
+    }
+
+    .result-side {
+        margin-top: 20px;
+
+        text-align: left;
+    }
+
+    .result-box strong {
+        font-size: 45px;
+    }
+}
+```

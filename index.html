@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>50CC Tools — Calculateurs 50cc</title>
+
+    <meta name="description"
+        content="Calculateurs gratuits pour 50cc : vitesse, cylindrée, transmission, puissance et consommation.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>50</span>CC
+        </div>
+
+        <nav class="nav">
+            <a href="#outils">Outils</a>
+            <a href="#apropos">À propos</a>
+        </nav>
+
+        <a href="#outils" class="button button-main">
+            Calculer
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    OUTILS 50CC • 100% GRATUITS
+                </span>
+
+                <h1>
+                    Ton 50cc.<br>
+                    <span>Tes calculs.</span>
+                </h1>
+
+                <p>
+                    Calcule rapidement les performances et caractéristiques
+                    de ton 50cc.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#outils" class="button button-main">
+                        Voir les calculateurs
+                    </a>
+
+                    <a href="#apropos" class="button button-secondary">
+                        En savoir plus
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OUTILS ================= -->
+
+        <section class="tools-section" id="outils">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    LES OUTILS
+                </span>
+
+                <h2>
+                    Calculateurs 50cc
+                </h2>
+
+                <p>
+                    Des outils simples pour préparer et comprendre ta configuration.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+                <a href="#vitesse" class="tool-card">
+
+                    <div class="tool-icon">
+                        KM/H
+                    </div>
+
+                    <h3>
+                        Vitesse théorique
+                    </h3>
+
+                    <p>
+                        Estime la vitesse maximale selon les rapports et le régime moteur.
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#cylindree" class="tool-card">
+
+                    <div class="tool-icon">
+                        CC
+                    </div>
+
+                    <h3>
+                        Cylindrée
+                    </h3>
+
+                    <p>
+                        Calcule la cylindrée à partir de l'alésage et de la course.
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#transmission" class="tool-card">
+
+                    <div class="tool-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Pignon / couronne
+                    </h3>
+
+                    <p>
+                        Calcule le rapport de transmission finale.
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#puissance" class="tool-card">
+
+                    <div class="tool-icon">
+                        KW
+                    </div>
+
+                    <h3>
+                        CV → kW
+                    </h3>
+
+                    <p>
+                        Convertis facilement une puissance en chevaux vers les kW.
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#consommation" class="tool-card">
+
+                    <div class="tool-icon">
+                        L
+                    </div>
+
+                    <h3>
+                        Consommation
+                    </h3>
+
+                    <p>
+                        Calcule la consommation de ton 50cc en L/100 km.
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VITESSE ================= -->
+
+        <section class="calculator-section" id="vitesse">
+
+            <div class="calculator-heading">
+
+                <span class="number">
+                    01
+                </span>
+
+                <div>
+
+                    <span class="section-label">
+                        CALCULATEUR
+                    </span>
+
+                    <h2>
+                        Vitesse théorique
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-card">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+
+                        <label for="rpm">
+                            Régime moteur (tr/min)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="rpm"
+                            value="10000"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="wheel">
+                            Diamètre roue (pouces)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="wheel"
+                            value="17"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="front">
+                            Pignon
+                        </label>
+
+                        <input
+                            type="number"
+                            id="front"
+                            value="13"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="rear">
+                            Couronne
+                        </label>
+
+                        <input
+                            type="number"
+                            id="rear"
+                            value="42"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="primary">
+                            Rapport primaire
+                        </label>
+
+                        <input
+                            type="number"
+                            id="primary"
+                            value="1"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="secondary">
+                            Rapport secondaire
+                        </label>
+
+                        <input
+                            type="number"
+                            id="secondary"
+                            value="1"
+                            step="0.01"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            VITESSE THÉORIQUE
+                        </span>
+
+                        <strong id="speed">
+                            0
+                        </strong>
+
+                        <span class="result-unit">
+                            km/h
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-side">
+
+                        <span class="result-label">
+                            RAPPORT TOTAL
+                        </span>
+
+                        <strong id="totalRatio">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CYLINDRÉE ================= -->
+
+        <section class="calculator-section" id="cylindree">
+
+            <div class="calculator-heading">
+
+                <span class="number">
+                    02
+                </span>
+
+                <div>
+
+                    <span class="section-label">
+                        CALCULATEUR
+                    </span>
+
+                    <h2>
+                        Cylindrée
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-card">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+
+                        <label for="bore">
+                            Alésage (mm)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="bore"
+                            placeholder="Ex : 40"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="stroke">
+                            Course (mm)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="stroke"
+                            placeholder="Ex : 39"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            CYLINDRÉE
+                        </span>
+
+                        <strong id="cc">
+                            0
+                        </strong>
+
+                        <span class="result-unit">
+                            cm³
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRANSMISSION ================= -->
+
+        <section class="calculator-section" id="transmission">
+
+            <div class="calculator-heading">
+
+                <span class="number">
+                    03
+                </span>
+
+                <div>
+
+                    <span class="section-label">
+                        CALCULATEUR
+                    </span>
+
+                    <h2>
+                        Pignon / couronne
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-card">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+
+                        <label for="gearFront">
+                            Nombre de dents du pignon
+                        </label>
+
+                        <input
+                            type="number"
+                            id="gearFront"
+                            placeholder="Ex : 13"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="gearRear">
+                            Nombre de dents de la couronne
+                        </label>
+
+                        <input
+                            type="number"
+                            id="gearRear"
+                            placeholder="Ex : 42"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            RAPPORT FINAL
+                        </span>
+
+                        <strong id="finalRatio">
+                            0
+                        </strong>
+
+                        <span class="result-unit">
+                            :1
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="disclaimer"
+                    id="transmissionText"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PUISSANCE ================= -->
+
+        <section class="calculator-section" id="puissance">
+
+            <div class="calculator-heading">
+
+                <span class="number">
+                    04
+                </span>
+
+                <div>
+
+                    <span class="section-label">
+                        CONVERSION
+                    </span>
+
+                    <h2>
+                        CV → kW
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-card">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+
+                        <label for="cv">
+                            Puissance (CV)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="cv"
+                            placeholder="Ex : 10"
+                            step="0.1"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            PUISSANCE
+                        </span>
+
+                        <strong id="kw">
+                            0
+                        </strong>
+
+                        <span class="result-unit">
+                            kW
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONSOMMATION ================= -->
+
+        <section class="calculator-section" id="consommation">
+
+            <div class="calculator-heading">
+
+                <span class="number">
+                    05
+                </span>
+
+                <div>
+
+                    <span class="section-label">
+                        CALCULATEUR
+                    </span>
+
+                    <h2>
+                        Consommation 50cc
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-card">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+
+                        <label for="fuelUsed">
+                            Essence consommée (L)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="fuelUsed"
+                            placeholder="Ex : 4"
+                            step="0.1"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="distance">
+                            Distance parcourue (km)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="distance"
+                            placeholder="Ex : 100"
+                            step="1"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            CONSOMMATION
+                        </span>
+
+                        <strong id="consumption">
+                            0
+                        </strong>
+
+                        <span class="result-unit">
+                            L / 100 km
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="disclaimer">
+                    Entre la quantité d'essence consommée et la distance parcourue.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= À PROPOS ================= -->
+
+        <section class="about-section" id="apropos">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    À PROPOS
+                </span>
+
+                <h2>
+                    50CC Tools
+                </h2>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <p>
+                    50CC Tools est un projet dédié aux passionnés de
+                    cyclomoteurs et de 50cc.
+                </p>
+
+                <p>
+                    Le site propose des calculateurs simples et gratuits
+                    pour aider à comprendre et préparer une configuration.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>50</span>CC
+        </div>
+
+        <p>
+            © 2026 50CC Tools — Calculateurs 50cc gratuits.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
